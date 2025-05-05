@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    table {
+        width: 100%;
+        font-size: 0.9em;
+    }
+}
+
+
+header {
+    background-color: #3e3e3e;
+    color: white;
+    padding: 7px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.hero {
+    background-color: #007bff;
+    color: white;
+    padding: 80px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 50%;
+    margin-left: 70px;
+
+}
+.hero-text p {
+    margin: 10px 0; /* Adiciona espaçamento entre os parágrafos */
+}
+
+.hero-text a {
+    color: #ffffff; /* Cor do link */
+    text-decoration: underline; /* Adiciona sublinhado ao link */
+}
+
+
+.hero-image {
+    max-width: 40%;
+    height: auto;
+    margin-right: 70px;
+}
+
+.features {
+    padding: 20px;
+    text-align: center;
+}
+
+.ticker {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.ticker ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    animation: ticker 10s linear infinite;
+}
+
+.ticker li {
+    display: inline;
+    padding: 0 50px; /* Espaçamento entre as funcionalidades */
+}
+
+@keyframes ticker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer {
+    background-color: #3e3e3e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; 
+}
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fixo na tela */
+    z-index: 1000; /* Fica em cima dos outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita scroll se necessário */
+    background-color: rgb(0,0,0); /* Fundo preto */
+    background-color: rgba(0,0,0,0.4); /* Fundo preto com transparência */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Margens no topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+    max-width: 500px; /* Largura máxima */
+    text-align: center; /* Centraliza o texto */
+}
+
+.close {
+    color: #aaa;
+    float: right; /* Posiciona no canto */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
